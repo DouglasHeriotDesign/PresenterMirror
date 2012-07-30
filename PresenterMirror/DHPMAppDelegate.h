@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Quartz/Quartz.h>
 
-@interface DHPMAppDelegate : NSObject <NSApplicationDelegate>
-
+@interface DHPMAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
+@property (weak) NSMenu *screenMenu;
+- (IBAction)selectScreen:(id)sender;
 @end

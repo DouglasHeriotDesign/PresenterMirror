@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678AD15C6CD640026C03E /* NSScreen_Extension.m */; };
+		A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56678B015C6CDE80026C03E /* IOKit.framework */; };
 		A592614D15C6BE0D00A9D09F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592614C15C6BE0D00A9D09F /* Cocoa.framework */; };
 		A592615715C6BE0D00A9D09F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A592615515C6BE0D00A9D09F /* InfoPlist.strings */; };
 		A592615915C6BE0D00A9D09F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A592615815C6BE0D00A9D09F /* main.m */; };
@@ -33,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A56678AC15C6CD640026C03E /* NSScreen_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScreen_Extension.h; sourceTree = "<group>"; };
+		A56678AD15C6CD640026C03E /* NSScreen_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScreen_Extension.m; sourceTree = "<group>"; };
+		A56678B015C6CDE80026C03E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		A592614815C6BE0D00A9D09F /* PresenterMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresenterMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A592614C15C6BE0D00A9D09F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A592614F15C6BE0D00A9D09F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -62,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */,
 				A592618315C6BE9900A9D09F /* Quartz.framework in Frameworks */,
 				A592618115C6BE8F00A9D09F /* QuartzCore.framework in Frameworks */,
 				A592614D15C6BE0D00A9D09F /* Cocoa.framework in Frameworks */,
@@ -102,6 +108,7 @@
 		A592614B15C6BE0D00A9D09F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A56678B015C6CDE80026C03E /* IOKit.framework */,
 				A592618215C6BE9900A9D09F /* Quartz.framework */,
 				A592618015C6BE8F00A9D09F /* QuartzCore.framework */,
 				A592614C15C6BE0D00A9D09F /* Cocoa.framework */,
@@ -127,6 +134,8 @@
 				A592615E15C6BE0D00A9D09F /* DHPMAppDelegate.h */,
 				A592615F15C6BE0D00A9D09F /* DHPMAppDelegate.m */,
 				A592616115C6BE0D00A9D09F /* MainMenu.xib */,
+				A56678AC15C6CD640026C03E /* NSScreen_Extension.h */,
+				A56678AD15C6CD640026C03E /* NSScreen_Extension.m */,
 				A592615315C6BE0D00A9D09F /* Supporting Files */,
 			);
 			path = PresenterMirror;
@@ -276,6 +285,7 @@
 			files = (
 				A592615915C6BE0D00A9D09F /* main.m in Sources */,
 				A592616015C6BE0D00A9D09F /* DHPMAppDelegate.m in Sources */,
+				A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +467,7 @@
 				A592617C15C6BE0E00A9D09F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A592617D15C6BE0E00A9D09F /* Build configuration list for PBXNativeTarget "PresenterMirrorTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +476,7 @@
 				A592617F15C6BE0E00A9D09F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

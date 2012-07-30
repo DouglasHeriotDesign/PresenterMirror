@@ -17,6 +17,9 @@
 		A592616C15C6BE0E00A9D09F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592614C15C6BE0D00A9D09F /* Cocoa.framework */; };
 		A592617415C6BE0E00A9D09F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A592617215C6BE0E00A9D09F /* InfoPlist.strings */; };
 		A592617715C6BE0E00A9D09F /* PresenterMirrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A592617615C6BE0E00A9D09F /* PresenterMirrorTests.m */; };
+		A592618115C6BE8F00A9D09F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592618015C6BE8F00A9D09F /* QuartzCore.framework */; };
+		A592618315C6BE9900A9D09F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592618215C6BE9900A9D09F /* Quartz.framework */; };
+		A592618815C6C08300A9D09F /* Mirror.qtz in Resources */ = {isa = PBXBuildFile; fileRef = A592618715C6C08300A9D09F /* Mirror.qtz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		A592617315C6BE0E00A9D09F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A592617515C6BE0E00A9D09F /* PresenterMirrorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresenterMirrorTests.h; sourceTree = "<group>"; };
 		A592617615C6BE0E00A9D09F /* PresenterMirrorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresenterMirrorTests.m; sourceTree = "<group>"; };
+		A592618015C6BE8F00A9D09F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A592618215C6BE9900A9D09F /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		A592618715C6C08300A9D09F /* Mirror.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = Mirror.qtz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A592618315C6BE9900A9D09F /* Quartz.framework in Frameworks */,
+				A592618115C6BE8F00A9D09F /* QuartzCore.framework in Frameworks */,
 				A592614D15C6BE0D00A9D09F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +102,8 @@
 		A592614B15C6BE0D00A9D09F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A592618215C6BE9900A9D09F /* Quartz.framework */,
+				A592618015C6BE8F00A9D09F /* QuartzCore.framework */,
 				A592614C15C6BE0D00A9D09F /* Cocoa.framework */,
 				A592616A15C6BE0E00A9D09F /* SenTestingKit.framework */,
 				A592614E15C6BE0D00A9D09F /* Other Frameworks */,
@@ -125,6 +135,7 @@
 		A592615315C6BE0D00A9D09F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A592618715C6C08300A9D09F /* Mirror.qtz */,
 				A592615415C6BE0D00A9D09F /* PresenterMirror-Info.plist */,
 				A592615515C6BE0D00A9D09F /* InfoPlist.strings */,
 				A592615815C6BE0D00A9D09F /* main.m */,
@@ -228,6 +239,7 @@
 				A592615715C6BE0D00A9D09F /* InfoPlist.strings in Resources */,
 				A592615D15C6BE0D00A9D09F /* Credits.rtf in Resources */,
 				A592616315C6BE0D00A9D09F /* MainMenu.xib in Resources */,
+				A592618815C6C08300A9D09F /* Mirror.qtz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

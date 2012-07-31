@@ -43,8 +43,6 @@
 	[self setScreenIndex:[[NSUserDefaults standardUserDefaults] integerForKey:@"displayIndex"]];
 	
 	[self.window makeKeyAndOrderFront:self];
-	
-	
 }
 
 - (NSInteger)numberOfItemsInMenu:(NSMenu *)menu
@@ -67,6 +65,12 @@
 		item.tag = index;
 		
 		item.state = screen.displayID == self.selectedDisplayId;
+		
+		if(index < 9)
+		{
+			item.keyEquivalent = @(index+1).stringValue;
+			item.keyEquivalentModifierMask = NSCommandKeyMask;
+		}
 		
 		item.target = self;
 		item.action = @selector(selectScreen:);

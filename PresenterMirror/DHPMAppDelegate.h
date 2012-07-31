@@ -13,4 +13,5 @@
 @interface DHPMAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
 @property (weak) NSMenu *screenMenu;
 - (IBAction)selectScreen:(id)sender;
+- (IBAction)scale100:(id)sender;
 @end

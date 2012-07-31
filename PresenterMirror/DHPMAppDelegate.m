@@ -15,14 +15,17 @@
 @property (strong) NSArray *screens;
 @property (weak) QCCompositionLayer *layer;
 @property (readonly) CGDirectDisplayID selectedDisplayId;
+@property (readonly, strong) NSScreen *selectedScreen;
 @end
 
 @implementation DHPMAppDelegate
-@synthesize screenMenu = _screenMenu;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	self.screens = [NSScreen screens];
+	
+	// Load the custom screen capture plugin
+	[QCPlugIn loadPlugInAtPath:[[NSBundle mainBundle] pathForResource:@"v002 Media Tools" ofType:@"plugin"]];
 	
 	self.window = [[DHPMDisplayWindow alloc] initWithContentRect:NSMakeRect(900, 100, 400, 300) styleMask:NSBorderlessWindowMask | NSResizableWindowMask | NSMiniaturizableWindowMask backing:NSBackingStoreRetained defer:NO screen:[NSScreen mainScreen]];
 //	self.window.level = NSStatusWindowLevel;
@@ -81,6 +84,7 @@
 	NSScreen *screen = self.screens[index];
 	NSSize newSize = screen.frame.size;
 	
+	_selectedScreen = screen;
 	_selectedDisplayId = screen.displayID;
 	
 	[self.layer setValue:@(screen.displayID) forInputKey:@"Display_ID"];
@@ -96,6 +100,15 @@
 - (IBAction)selectScreen:(id)sender
 {
 	[self setScreenIndex:[sender tag]];
+}
+
+- (IBAction)scale100:(id)sender
+{
+	NSRect newFrame = self.window.frame;
+	newFrame.size.width = self.selectedScreen.frame.size.width / self.window.screen.backingScaleFactor;
+	newFrame.size.height = self.selectedScreen.frame.size.height / self.window.screen.backingScaleFactor;
+	
+	[self.window setFrame:newFrame display:YES animate:NO];
 }
 
 @end

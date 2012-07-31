@@ -11,7 +11,13 @@
 #import <Quartz/Quartz.h>
 
 @interface DHPMAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
+
+@property (readonly) CGDirectDisplayID selectedDisplayId;
+@property (readonly, strong) NSScreen *selectedScreen;
+
 @property (weak) NSMenu *screenMenu;
 - (IBAction)selectScreen:(id)sender;
 - (IBAction)scale100:(id)sender;
+- (IBAction)selectKeepOnTop:(id)sender;
+
 @end

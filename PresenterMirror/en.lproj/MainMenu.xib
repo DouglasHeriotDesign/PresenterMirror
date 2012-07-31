@@ -14,6 +14,7 @@
 			<string>NSCustomObject</string>
 			<string>NSMenu</string>
 			<string>NSMenuItem</string>
+			<string>NSUserDefaultsController</string>
 		</array>
 		<array key="IBDocument.PluginDependencies">
 			<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -182,7 +183,7 @@
 							<array class="NSMutableArray" key="NSMenuItems"/>
 						</object>
 					</object>
-					<object class="NSMenuItem" id="840719568">
+					<object class="NSMenuItem" id="901749400">
 						<reference key="NSMenu" ref="649796088"/>
 						<string key="NSTitle">View</string>
 						<string key="NSKeyEquiv"/>
@@ -190,13 +191,23 @@
 						<reference key="NSOnImage" ref="35465992"/>
 						<reference key="NSMixedImage" ref="502551668"/>
 						<string key="NSAction">submenuAction:</string>
-						<object class="NSMenu" key="NSSubmenu" id="515963725">
+						<object class="NSMenu" key="NSSubmenu" id="1040668291">
 							<string key="NSTitle">View</string>
 							<array class="NSMutableArray" key="NSMenuItems">
-								<object class="NSMenuItem" id="919094952">
-									<reference key="NSMenu" ref="515963725"/>
+								<object class="NSMenuItem" id="385786675">
+									<reference key="NSMenu" ref="1040668291"/>
 									<string key="NSTitle">100% Scale</string>
-									<string key="NSKeyEquiv"/>
+									<string key="NSKeyEquiv">0</string>
+									<int key="NSKeyEquivModMask">1048576</int>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
+								<object class="NSMenuItem" id="836769994">
+									<reference key="NSMenu" ref="1040668291"/>
+									<string key="NSTitle">Keep on Top</string>
+									<string key="NSKeyEquiv">k</string>
+									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
@@ -288,8 +299,11 @@
 			<object class="NSCustomObject" id="976324537">
 				<string key="NSClassName">DHPMAppDelegate</string>
 			</object>
-			<object class="NSCustomObject" id="755631768">
-				<string key="NSClassName">NSFontManager</string>
+			<object class="NSUserDefaultsController" id="682121123">
+				<bool key="NSAppliesImmediately">YES</bool>
+			</object>
+			<object class="NSUserDefaultsController" id="567565163">
+				<bool key="NSSharedInstance">YES</bool>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -386,9 +400,17 @@
 					<object class="IBActionConnection" key="connection">
 						<string key="label">scale100:</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="919094952"/>
+						<reference key="destination" ref="385786675"/>
 					</object>
 					<int key="connectionID">711</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectKeepOnTop:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="836769994"/>
+					</object>
+					<int key="connectionID">717</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -397,6 +419,22 @@
 						<reference key="destination" ref="976324537"/>
 					</object>
 					<int key="connectionID">705</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: values.keepOnTop</string>
+						<reference key="source" ref="836769994"/>
+						<reference key="destination" ref="567565163"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="836769994"/>
+							<reference key="NSDestination" ref="567565163"/>
+							<string key="NSLabel">value: values.keepOnTop</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">values.keepOnTop</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">716</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -433,7 +471,7 @@
 							<reference ref="694149608"/>
 							<reference ref="448692316"/>
 							<reference ref="971665330"/>
-							<reference ref="840719568"/>
+							<reference ref="901749400"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -566,11 +604,6 @@
 						<reference key="parent" ref="835318025"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">420</int>
-						<reference key="object" ref="755631768"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">490</int>
 						<reference key="object" ref="448692316"/>
 						<array class="NSMutableArray" key="children">
@@ -612,24 +645,40 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">708</int>
-						<reference key="object" ref="840719568"/>
+						<reference key="object" ref="901749400"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="515963725"/>
+							<reference ref="1040668291"/>
 						</array>
 						<reference key="parent" ref="649796088"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">709</int>
-						<reference key="object" ref="515963725"/>
+						<reference key="object" ref="1040668291"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="919094952"/>
+							<reference ref="385786675"/>
+							<reference ref="836769994"/>
 						</array>
-						<reference key="parent" ref="840719568"/>
+						<reference key="parent" ref="901749400"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">710</int>
-						<reference key="object" ref="919094952"/>
-						<reference key="parent" ref="515963725"/>
+						<reference key="object" ref="385786675"/>
+						<reference key="parent" ref="1040668291"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">712</int>
+						<reference key="object" ref="682121123"/>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">713</int>
+						<reference key="object" ref="836769994"/>
+						<reference key="parent" ref="1040668291"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">714</int>
+						<reference key="object" ref="567565163"/>
+						<reference key="parent" ref="0"/>
 					</object>
 				</array>
 			</object>
@@ -653,7 +702,6 @@
 				<string key="239.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
-				<string key="420.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="490.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="491.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="492.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -667,40 +715,18 @@
 				<string key="708.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="709.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="710.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="712.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="713.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="714.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">711</int>
+			<int key="maxID">717</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">DHPMAppDelegate</string>
-					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="scale100:">id</string>
-						<string key="selectScreen:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="scale100:">
-							<string key="name">scale100:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="selectScreen:">
-							<string key="name">selectScreen:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/DHPMAppDelegate.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

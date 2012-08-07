@@ -23,7 +23,6 @@
 		A592618115C6BE8F00A9D09F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592618015C6BE8F00A9D09F /* QuartzCore.framework */; };
 		A592618315C6BE9900A9D09F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592618215C6BE9900A9D09F /* Quartz.framework */; };
 		A592618815C6C08300A9D09F /* Mirror.qtz in Resources */ = {isa = PBXBuildFile; fileRef = A592618715C6C08300A9D09F /* Mirror.qtz */; };
-		A5B9CA8F15C81758003D23B4 /* v002 Media Tools.plugin in Resources */ = {isa = PBXBuildFile; fileRef = A5B9CA8E15C81758003D23B4 /* v002 Media Tools.plugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,7 @@
 		A592618015C6BE8F00A9D09F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A592618215C6BE9900A9D09F /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		A592618715C6C08300A9D09F /* Mirror.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = Mirror.qtz; sourceTree = "<group>"; };
-		A5B9CA8E15C81758003D23B4 /* v002 Media Tools.plugin */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "v002 Media Tools.plugin"; sourceTree = "<group>"; };
+		A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "v002 Media Tools.xcodeproj"; path = "v002-Media-Tools/v002 Media Tools.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +97,7 @@
 				A592616F15C6BE0E00A9D09F /* PresenterMirrorTests */,
 				A592614B15C6BE0D00A9D09F /* Frameworks */,
 				A592614915C6BE0D00A9D09F /* Products */,
+				A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,7 +151,6 @@
 		A592615315C6BE0D00A9D09F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A5B9CA8E15C81758003D23B4 /* v002 Media Tools.plugin */,
 				A592618715C6C08300A9D09F /* Mirror.qtz */,
 				A592615415C6BE0D00A9D09F /* PresenterMirror-Info.plist */,
 				A592615515C6BE0D00A9D09F /* InfoPlist.strings */,
@@ -179,6 +178,11 @@
 				A592617215C6BE0E00A9D09F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5CBBFBB15D0CDB700DC01D7 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +244,12 @@
 			mainGroup = A592613D15C6BE0D00A9D09F;
 			productRefGroup = A592614915C6BE0D00A9D09F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A5CBBFBB15D0CDB700DC01D7 /* Products */;
+					ProjectRef = A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A592614715C6BE0D00A9D09F /* PresenterMirror */,
@@ -257,7 +267,6 @@
 				A592615D15C6BE0D00A9D09F /* Credits.rtf in Resources */,
 				A592616315C6BE0D00A9D09F /* MainMenu.xib in Resources */,
 				A592618815C6C08300A9D09F /* Mirror.qtz in Resources */,
-				A5B9CA8F15C81758003D23B4 /* v002 Media Tools.plugin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

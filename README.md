@@ -2,6 +2,10 @@
 
 ## [Download (v0.3)](https://github.com/downloads/DouglasHeriot/PresenterMirror/PresenterMirror.app.zip)
 
+**Requires OS X 10.8 Mountain Lion**. (Requires new `CGDisplayStream` APIs, probably created by Apple also for use in AirPlay mirroring)
+
+## Backstory
+
 So, you’ve got to present something on your Mac. Say, a live coding demo, which we all fear.
 
 What are your Mac’s display options?
@@ -10,14 +14,13 @@ What are your Mac’s display options?
 
 * *Extended desktop mode* – You can do whatever you want on your MacBook’s display, while presenting on a projector. *But how do you see what you’re doing?* Doesn’t work if you don’t have another monitor display set up, or if you want to awkwardly look at the projector behind you.
 
+**Isn’t there a better way?**
 
-*Isn’t there a better way?*
-
-# Presenter Mirror!
+## Presenter Mirror!
 
 If you’re using extended desktop mode, Presenter Mirror can display the secondary display (which you probably have on a projector behind you) in a window on your desktop!
 
-Works great with *retina MacBook Pro!* – You can make the window nice and small, and it’s still perfectly clear! Lots of room for your notes.
+Works great with **retina MacBook Pro!** – You can make the window nice and small, and it’s still perfectly clear! Lots of room for your notes.
 
 Having it in a small window has the added benefit of simulating what it’s like for your audience looking at the screen from a distance away – if text is too small to read in the small mirror window, it’s probably too small for your audience too!
 

@@ -23,6 +23,7 @@
 		A592618115C6BE8F00A9D09F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592618015C6BE8F00A9D09F /* QuartzCore.framework */; };
 		A592618315C6BE9900A9D09F /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592618215C6BE9900A9D09F /* Quartz.framework */; };
 		A592618815C6C08300A9D09F /* Mirror.qtz in Resources */ = {isa = PBXBuildFile; fileRef = A592618715C6C08300A9D09F /* Mirror.qtz */; };
+		A5CBBFC615D1407600DC01D7 /* v002 Media Tools.plugin in Resources */ = {isa = PBXBuildFile; fileRef = A5CBBFC515D1407600DC01D7 /* v002 Media Tools.plugin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = A592614715C6BE0D00A9D09F;
 			remoteInfo = PresenterMirror;
+		};
+		A5CBBFC415D1407600DC01D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B3410AA15B38BB10035CA52;
+			remoteInfo = "v002 Media Tools";
+		};
+		A5CBBFC715D1407A00DC01D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B3410A915B38BB10035CA52;
+			remoteInfo = "v002 Media Tools";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -182,6 +197,9 @@
 		};
 		A5CBBFBB15D0CDB700DC01D7 /* Products */ = {
 			isa = PBXGroup;
+			children = (
+				A5CBBFC515D1407600DC01D7 /* v002 Media Tools.plugin */,
+			);
 			name = Products;
 			sourceTree = "<group>";
 		};
@@ -199,6 +217,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A5CBBFC815D1407A00DC01D7 /* PBXTargetDependency */,
 			);
 			name = PresenterMirror;
 			productName = PresenterMirror;
@@ -258,6 +277,16 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		A5CBBFC515D1407600DC01D7 /* v002 Media Tools.plugin */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "v002 Media Tools.plugin";
+			remoteRef = A5CBBFC415D1407600DC01D7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		A592614615C6BE0D00A9D09F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -267,6 +296,7 @@
 				A592615D15C6BE0D00A9D09F /* Credits.rtf in Resources */,
 				A592616315C6BE0D00A9D09F /* MainMenu.xib in Resources */,
 				A592618815C6C08300A9D09F /* Mirror.qtz in Resources */,
+				A5CBBFC615D1407600DC01D7 /* v002 Media Tools.plugin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +353,11 @@
 			isa = PBXTargetDependency;
 			target = A592614715C6BE0D00A9D09F /* PresenterMirror */;
 			targetProxy = A592616D15C6BE0E00A9D09F /* PBXContainerItemProxy */;
+		};
+		A5CBBFC815D1407A00DC01D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "v002 Media Tools";
+			targetProxy = A5CBBFC715D1407A00DC01D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -28,6 +28,7 @@
 	self.window = [[DHPMDisplayWindow alloc] initWithContentRect:NSMakeRect(900, 100, 400, 300) styleMask:NSBorderlessWindowMask | NSResizableWindowMask | NSMiniaturizableWindowMask backing:NSBackingStoreRetained defer:NO screen:[NSScreen mainScreen]];
 	self.window.collectionBehavior = NSWindowCollectionBehaviorStationary | NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorParticipatesInCycle;
 	self.window.frameAutosaveName = @"PresenterMirror";
+	self.window.title = @"Presenter Mirror";
 	self.window.canHide = NO;
 	self.window.minSize = NSMakeSize(20, 20);
 	
@@ -116,9 +117,9 @@
 
 - (IBAction)scale100:(id)sender
 {
-	NSRect newFrame = self.window.frame;
-	newFrame.size.width = self.selectedScreen.frame.size.width / self.window.screen.backingScaleFactor;
-	newFrame.size.height = self.selectedScreen.frame.size.height / self.window.screen.backingScaleFactor;
+	NSRect newFrame;
+	newFrame.size.width = self.selectedScreen.frame.size.width * self.selectedScreen.backingScaleFactor / self.window.screen.backingScaleFactor;
+	newFrame.size.height = self.selectedScreen.frame.size.height * self.selectedScreen.backingScaleFactor / self.window.screen.backingScaleFactor;
 	
 	newFrame = [self.window constrainFrameRect:newFrame toScreen:self.window.screen];
 	

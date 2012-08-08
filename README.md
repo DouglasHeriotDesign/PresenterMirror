@@ -6,7 +6,7 @@
 
 ## Backstory
 
-So, you’ve got to present something on your Mac. Say, a live coding demo, which we all fear.
+So, you’ve got to present something on your Mac. Say, a live coding demo or a Photoshop tutorial.
 
 What are your Mac’s display options?
 

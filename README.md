@@ -1,6 +1,6 @@
 # Presenter Mirror
 
-## [Download (v0.3)](https://github.com/downloads/DouglasHeriot/PresenterMirror/PresenterMirror.app.zip)
+## [Download (v0.3)](https://github.com/downloads/DouglasHeriot/PresenterMirror/PresenterMirror.app%200.35.zip)
 
 **Requires OS X 10.8 Mountain Lion**. (Requires new `CGDisplayStream` APIs, probably created by Apple also for use in AirPlay mirroring)
 
@@ -31,7 +31,7 @@ Having it in a small window has the added benefit of simulating what it’s like
 
     git clone --recursive git://github.com/DouglasHeriot/PresenterMirror.git
 
-You can also [download compiled `.app` (v0.3)](https://github.com/downloads/DouglasHeriot/PresenterMirror/PresenterMirror.app.zip)
+You can also [download compiled `.app` (v0.35)](https://github.com/downloads/DouglasHeriot/PresenterMirror/PresenterMirror.app%200.35.zip)
 
 ## Licence
 Licenced under Creative Commons, Attribution – Non Commercial – Share Alike 3.0

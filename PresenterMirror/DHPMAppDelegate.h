@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Quartz/Quartz.h>
 
-@interface DHPMAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate>
+@interface DHPMAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate /*, NSLayerDelegateContentsScaleUpdating*/>
 
 @property (readonly) CGDirectDisplayID selectedDisplayId;
 @property (readonly, strong) NSScreen *selectedScreen;

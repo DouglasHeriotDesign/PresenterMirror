@@ -34,7 +34,8 @@
 	[self selectKeepOnTop:self];
 	
 	self.layer = [[QCCompositionLayer alloc] initWithFile:[[NSBundle mainBundle] pathForResource:@"Mirror" ofType:@"qtz"]];
-	self.layer.contentsScale = [NSScreen highestBackingScaleFactor];
+	self.layer.delegate = self;
+	self.layer.contentsScale = self.window.screen.backingScaleFactor;
 	
 	NSView *view = self.window.contentView;
 	view.layer = self.layer;
@@ -101,6 +102,11 @@
 	newFrame.size.height = newFrame.size.width * newSize.height/newSize.width;
 	newFrame = [self.window constrainFrameRect:newFrame toScreen:self.window.screen];
 	[self.window setFrame:newFrame display:YES animate:NO];
+}
+
+- (BOOL)layer:(CALayer *)layer shouldInheritContentsScale:(CGFloat)newScale fromWindow:(NSWindow *)window
+{
+	return YES;
 }
 
 - (IBAction)selectScreen:(id)sender

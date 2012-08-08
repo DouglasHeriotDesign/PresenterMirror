@@ -117,7 +117,7 @@
 
 - (IBAction)scale100:(id)sender
 {
-	NSRect newFrame;
+	NSRect newFrame = self.window.frame; // contains current origin
 	newFrame.size.width = self.selectedScreen.frame.size.width * self.selectedScreen.backingScaleFactor / self.window.screen.backingScaleFactor;
 	newFrame.size.height = self.selectedScreen.frame.size.height * self.selectedScreen.backingScaleFactor / self.window.screen.backingScaleFactor;
 	

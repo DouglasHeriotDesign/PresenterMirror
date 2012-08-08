@@ -34,7 +34,7 @@
 	[self selectKeepOnTop:self];
 	
 	self.layer = [[QCCompositionLayer alloc] initWithFile:[[NSBundle mainBundle] pathForResource:@"Mirror" ofType:@"qtz"]];
-	self.layer.contentsScale = 2.0;//[NSScreen mainScreen].backingScaleFactor;
+	self.layer.contentsScale = [NSScreen highestBackingScaleFactor];
 	
 	NSView *view = self.window.contentView;
 	view.layer = self.layer;

@@ -30,6 +30,6 @@
 - (CGDirectDisplayID)displayID;
 + (NSScreen *)screenWithNumber:(int)number;
 + (void)builtin:(NSMutableArray *)builtinScreens AndExternalScreens:(NSMutableArray *)externalScreens;
-
++ (CGFloat)highestBackingScaleFactor; // Get the backing scale of the highest scale display
 
 @end

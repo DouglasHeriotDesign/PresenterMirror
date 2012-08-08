@@ -87,4 +87,18 @@
     }
 }
 
++ (CGFloat)highestBackingScaleFactor
+{
+    CGFloat maxScaleFactor = 1.0;
+    NSArray * screens = [NSScreen screens];
+    
+    for (NSScreen *screen in screens)
+    {
+        if (screen.backingScaleFactor > maxScaleFactor)
+            maxScaleFactor = screen.backingScaleFactor;
+    }
+    
+    return maxScaleFactor;
+}
+
 @end

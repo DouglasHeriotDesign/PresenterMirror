@@ -19,6 +19,7 @@
 	CGDisplayStreamRef displayStream;
 	IOSurfaceRef iosurface;
 	CGRect mirroredScreenFrame;
+	CGSize mirroredScreenSize;
 }
 @property (strong) dispatch_queue_t queue;
 @property BOOL hasDrawnLastSurface;
@@ -46,8 +47,13 @@
 	}
 	
 	mirroredScreenFrame = mirroredScreen.frame;
+	mirroredScreenSize = mirroredScreenFrame.size;
 	
-	displayStream = CGDisplayStreamCreateWithDispatchQueue(mirroredScreen.displayID, mirroredScreenFrame.size.width, mirroredScreenFrame.size.height, 'BGRA', nil, self.queue, ^(CGDisplayStreamFrameStatus status, uint64_t displayTime, IOSurfaceRef frameSurface, CGDisplayStreamUpdateRef updateRef) {
+	// Account for retina displays
+	mirroredScreenSize.width *= mirroredScreen.backingScaleFactor;
+	mirroredScreenSize.height *= mirroredScreen.backingScaleFactor;
+	
+	displayStream = CGDisplayStreamCreateWithDispatchQueue(mirroredScreen.displayID, mirroredScreenSize.width, mirroredScreenSize.height, 'BGRA', nil, self.queue, ^(CGDisplayStreamFrameStatus status, uint64_t displayTime, IOSurfaceRef frameSurface, CGDisplayStreamUpdateRef updateRef) {
 		
 		if(status == kCGDisplayStreamFrameStatusFrameComplete && frameSurface)
 		{
@@ -80,7 +86,7 @@
 	
 	glEnable(GL_TEXTURE_RECTANGLE_ARB);
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, surfaceTexture);
-	CGLError err = CGLTexImageIOSurface2D(ctx, GL_TEXTURE_RECTANGLE_ARB, GL_RGBA, mirroredScreenFrame.size.width, mirroredScreenFrame.size.height, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, iosurface, 0);
+	CGLError err = CGLTexImageIOSurface2D(ctx, GL_TEXTURE_RECTANGLE_ARB, GL_RGBA, mirroredScreenSize.width, mirroredScreenSize.height, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, iosurface, 0);
 	
 	if(err != kCGLNoError)
 	{
@@ -99,11 +105,11 @@
 	
 	glShadeModel(GL_SMOOTH);
 	glBegin(GL_POLYGON);
-	glTexCoord2f(0, mirroredScreenFrame.size.height);
+	glTexCoord2f(0, mirroredScreenSize.height);
 	glVertex2f(-1.0, -1.0);
-	glTexCoord2f(mirroredScreenFrame.size.width, mirroredScreenFrame.size.height);
+	glTexCoord2f(mirroredScreenSize.width, mirroredScreenSize.height);
 	glVertex2f(1.0, -1.0);
-	glTexCoord2f(mirroredScreenFrame.size.width, 0);
+	glTexCoord2f(mirroredScreenSize.width, 0);
 	glVertex2f(1.0, 1.0);
 	glTexCoord2f(0, 0);
 	glVertex2f(-1.0, 1.0);

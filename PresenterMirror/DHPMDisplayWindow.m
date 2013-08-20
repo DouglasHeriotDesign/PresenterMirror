@@ -27,6 +27,7 @@
 		
 		self.openGLLayer = [DHPMMirrorLayer new];
 		self.openGLLayer.delegate = self;
+		self.openGLLayer.contentsScale = self.screen.backingScaleFactor;
 		
 		// Make the content view layer-hosting
 		[self.contentView setLayer:self.openGLLayer];

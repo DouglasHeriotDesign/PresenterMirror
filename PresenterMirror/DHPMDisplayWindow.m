@@ -8,6 +8,7 @@
 
 #import "DHPMDisplayWindow.h"
 #import "DHPMMirrorLayer.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface DHPMDisplayWindow()
 @property (strong) DHPMMirrorLayer *openGLLayer;
@@ -25,12 +26,26 @@
 		self.minSize = NSMakeSize(20, 20);
 		
 		self.openGLLayer = [DHPMMirrorLayer new];
+		self.openGLLayer.delegate = self;
 		
 		// Make the content view layer-hosting
 		[self.contentView setLayer:self.openGLLayer];
 		[self.contentView setWantsLayer:YES];
 	}
 	return self;
+}
+
+- (void)setFrame:(NSRect)frameRect display:(BOOL)flag
+{
+	[super setFrame:frameRect display:flag];
+	
+	// Make sure the layer updates its size
+	[self.openGLLayer setNeedsDisplay];
+}
+
+- (BOOL)layer:(CALayer *)layer shouldInheritContentsScale:(CGFloat)newScale fromWindow:(NSWindow *)window
+{
+	return YES;
 }
 
 - (void)setMirroredScreen:(NSScreen *)mirroredScreen

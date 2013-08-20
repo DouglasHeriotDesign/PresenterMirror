@@ -84,7 +84,9 @@
 	_selectedScreen = screen;
 	_selectedDisplayId = screen.displayID;
 	
-	[self.layer setValue:@(screen.displayID) forInputKey:@"Display_ID"];
+	//[self.layer setValue:@(screen.displayID) forInputKey:@"Display_ID"];
+	
+	self.window.mirroredScreen = screen;
 	self.window.aspectRatio = newSize;
 	[[NSUserDefaults standardUserDefaults] setValue:@(index) forKey:@"displayIndex"];
 	

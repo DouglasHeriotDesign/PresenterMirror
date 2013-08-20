@@ -10,7 +10,7 @@
 #import "DHPMMirrorLayer.h"
 
 @interface DHPMDisplayWindow()
-@property (strong) CAOpenGLLayer *openGLLayer;
+@property (strong) DHPMMirrorLayer *openGLLayer;
 @end
 
 @implementation DHPMDisplayWindow
@@ -31,6 +31,12 @@
 		[self.contentView setWantsLayer:YES];
 	}
 	return self;
+}
+
+- (void)setMirroredScreen:(NSScreen *)mirroredScreen
+{
+	_mirroredScreen = mirroredScreen;
+	self.openGLLayer.mirroredScreen = mirroredScreen;
 }
 
 - (BOOL)canBecomeKeyWindow

@@ -10,4 +10,6 @@
 
 @interface DHPMMirrorLayer : CAOpenGLLayer
 
+@property (strong, nonatomic) NSScreen *mirroredScreen;
+
 @end

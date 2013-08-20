@@ -9,5 +9,5 @@
 #import <Cocoa/Cocoa.h>
 
 @interface DHPMDisplayWindow : NSWindow
-
+@property (strong, nonatomic) NSScreen *mirroredScreen;
 @end

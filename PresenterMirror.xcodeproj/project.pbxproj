@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A550639917C383F4005E337F /* DHPMMirrorLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A550639817C383F4005E337F /* DHPMMirrorLayer.m */; };
 		A550639B17C38594005E337F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550639A17C38594005E337F /* OpenGL.framework */; };
+		A550639D17C3910F005E337F /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550639C17C3910F005E337F /* IOSurface.framework */; };
 		A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678AD15C6CD640026C03E /* NSScreen_Extension.m */; };
 		A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56678B015C6CDE80026C03E /* IOKit.framework */; };
 		A56678B415C6D47E0026C03E /* DHPMDisplayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */; };
@@ -47,6 +48,7 @@
 		A550639717C383F4005E337F /* DHPMMirrorLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPMMirrorLayer.h; sourceTree = "<group>"; };
 		A550639817C383F4005E337F /* DHPMMirrorLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMMirrorLayer.m; sourceTree = "<group>"; };
 		A550639A17C38594005E337F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		A550639C17C3910F005E337F /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		A56678AC15C6CD640026C03E /* NSScreen_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScreen_Extension.h; sourceTree = "<group>"; };
 		A56678AD15C6CD640026C03E /* NSScreen_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScreen_Extension.m; sourceTree = "<group>"; };
 		A56678B015C6CDE80026C03E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A550639D17C3910F005E337F /* IOSurface.framework in Frameworks */,
 				A550639B17C38594005E337F /* OpenGL.framework in Frameworks */,
 				A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */,
 				A592618315C6BE9900A9D09F /* Quartz.framework in Frameworks */,
@@ -125,6 +128,7 @@
 		A592614B15C6BE0D00A9D09F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A550639C17C3910F005E337F /* IOSurface.framework */,
 				A550639A17C38594005E337F /* OpenGL.framework */,
 				A56678B015C6CDE80026C03E /* IOKit.framework */,
 				A592618215C6BE9900A9D09F /* Quartz.framework */,

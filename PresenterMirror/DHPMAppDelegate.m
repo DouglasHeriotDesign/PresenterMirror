@@ -25,22 +25,11 @@
 	// Load the custom screen capture plugin
 	[QCPlugIn loadPlugInAtPath:[[NSBundle mainBundle] pathForResource:@"v002 Media Tools" ofType:@"plugin"]];
 	
-	self.window = [[DHPMDisplayWindow alloc] initWithContentRect:NSMakeRect(900, 100, 400, 300) styleMask:NSBorderlessWindowMask | NSResizableWindowMask | NSMiniaturizableWindowMask backing:NSBackingStoreRetained defer:NO screen:[NSScreen mainScreen]];
-	self.window.collectionBehavior = NSWindowCollectionBehaviorStationary | NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorParticipatesInCycle;
+	self.window = [DHPMDisplayWindow new];
 	self.window.frameAutosaveName = @"PresenterMirror";
-	self.window.title = @"Presenter Mirror";
-	self.window.canHide = NO;
-	self.window.minSize = NSMakeSize(20, 20);
 	
 	[self selectKeepOnTop:self];
-	
-	self.layer = [[QCCompositionLayer alloc] initWithFile:[[NSBundle mainBundle] pathForResource:@"Mirror" ofType:@"qtz"]];
-	self.layer.delegate = self;
-	self.layer.contentsScale = self.window.screen.backingScaleFactor;
-	
-	NSView *view = self.window.contentView;
-	view.layer = self.layer;
-	view.wantsLayer = YES;
+		
 	
 	[self setScreenIndex:[[NSUserDefaults standardUserDefaults] integerForKey:@"displayIndex"]];
 	

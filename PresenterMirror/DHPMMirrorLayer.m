@@ -20,6 +20,9 @@
 	IOSurfaceRef iosurface;
 	CGRect mirroredScreenFrame;
 	CGSize mirroredScreenSize;
+	
+	BOOL hasCreatedTexture;
+	GLuint surfaceTexture;
 }
 @property (strong) dispatch_queue_t queue;
 @property BOOL hasDrawnLastSurface;
@@ -79,10 +82,11 @@
 
 - (void)drawInCGLContext:(CGLContextObj)ctx pixelFormat:(CGLPixelFormatObj)pf forLayerTime:(CFTimeInterval)t displayTime:(const CVTimeStamp *)ts
 {
-	GLuint surfaceTexture;
-	
-	
-	glGenTextures(1, &surfaceTexture);
+	if(!hasCreatedTexture)
+	{
+		glGenTextures(1, &surfaceTexture);
+		hasCreatedTexture = YES;
+	}
 	
 	glEnable(GL_TEXTURE_RECTANGLE_ARB);
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, surfaceTexture);

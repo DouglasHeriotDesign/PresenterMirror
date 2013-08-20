@@ -46,6 +46,7 @@
 
 - (BOOL)layer:(CALayer *)layer shouldInheritContentsScale:(CGFloat)newScale fromWindow:(NSWindow *)window
 {
+	[self.openGLLayer setNeedsDisplay];
 	return YES;
 }
 

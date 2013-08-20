@@ -103,17 +103,31 @@
 
 	glColor4f(1.0, 1.0, 1.0, 1.0);
 	
+	GLfloat textureCoords[] = {
+		0, mirroredScreenSize.height,
+		mirroredScreenSize.width, mirroredScreenSize.height,
+		mirroredScreenSize.width, 0,
+		0, 0};
+	
+	GLfloat vertices[] = {
+		-1.0, -1.0,
+		1.0, -1.0,
+		1.0, 1.0,
+		-1.0, 1.0
+	};
+	
 	glShadeModel(GL_SMOOTH);
-	glBegin(GL_POLYGON);
-	glTexCoord2f(0, mirroredScreenSize.height);
-	glVertex2f(-1.0, -1.0);
-	glTexCoord2f(mirroredScreenSize.width, mirroredScreenSize.height);
-	glVertex2f(1.0, -1.0);
-	glTexCoord2f(mirroredScreenSize.width, 0);
-	glVertex2f(1.0, 1.0);
-	glTexCoord2f(0, 0);
-	glVertex2f(-1.0, 1.0);
-	glEnd();
+	
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glTexCoordPointer(2, GL_FLOAT, 0, textureCoords);
+	glEnableClientState(GL_VERTEX_ARRAY);
+	glVertexPointer(2, GL_FLOAT, 0, vertices);
+	
+	glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
+	
+	glDisable(GL_TEXTURE_COORD_ARRAY);
+	glDisable(GL_VERTEX_ARRAY);
+	
 	
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, 0);
 	glDisable(GL_TEXTURE_RECTANGLE_ARB);

@@ -18,10 +18,10 @@
 {
 	CGDisplayStreamRef displayStream;
 	IOSurfaceRef iosurface;
-
+	CGRect mirroredScreenFrame;
 }
 @property (strong) dispatch_queue_t queue;
-
+@property BOOL hasDrawnLastSurface;
 @end
 
 @implementation DHPMMirrorLayer
@@ -45,7 +45,7 @@
 		CFRelease(displayStream);
 	}
 	
-	CGRect mirroredScreenFrame = mirroredScreen.frame;
+	mirroredScreenFrame = mirroredScreen.frame;
 	
 	displayStream = CGDisplayStreamCreateWithDispatchQueue(mirroredScreen.displayID, mirroredScreenFrame.size.width, mirroredScreenFrame.size.height, 'BGRA', nil, self.queue, ^(CGDisplayStreamFrameStatus status, uint64_t displayTime, IOSurfaceRef frameSurface, CGDisplayStreamUpdateRef updateRef) {
 		
@@ -54,6 +54,8 @@
 			IOSurfaceRef old = iosurface;
 			
 			iosurface = frameSurface;
+			self.hasDrawnLastSurface = NO;
+			
 			CFRetain(iosurface);
 			IOSurfaceIncrementUseCount(frameSurface);
 			
@@ -71,9 +73,6 @@
 
 - (void)drawInCGLContext:(CGLContextObj)ctx pixelFormat:(CGLPixelFormatObj)pf forLayerTime:(CFTimeInterval)t displayTime:(const CVTimeStamp *)ts
 {
-	glClearColor(0, 0, 0, 1);
-	glClear(GL_COLOR_BUFFER_BIT);
-	
 	GLuint surfaceTexture;
 	
 	
@@ -81,11 +80,13 @@
 	
 	glEnable(GL_TEXTURE_RECTANGLE_ARB);
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, surfaceTexture);
-	CGLError err = CGLTexImageIOSurface2D(ctx, GL_TEXTURE_RECTANGLE_ARB, GL_RGBA, IOSurfaceGetWidth(iosurface), IOSurfaceGetHeight(iosurface), GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, iosurface, 0);
+	CGLError err = CGLTexImageIOSurface2D(ctx, GL_TEXTURE_RECTANGLE_ARB, GL_RGBA, mirroredScreenFrame.size.width, mirroredScreenFrame.size.height, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, iosurface, 0);
 	
 	if(err != kCGLNoError)
 	{
 		//NSLog(@"CGLTexImageIOSurface2D failed!");
+		glClearColor(0, 0, 0, 1);
+		glClear(GL_COLOR_BUFFER_BIT);
 		return;
 	}
 	
@@ -93,23 +94,17 @@
 	glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 	glTexParameteri(GL_TEXTURE_RECTANGLE_ARB, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-	
-	float logoWidth = self.mirroredScreen.frame.size.width, logoHeight = self.mirroredScreen.frame.size.height;
 
 	glColor4f(1.0, 1.0, 1.0, 1.0);
 	
 	glShadeModel(GL_SMOOTH);
 	glBegin(GL_POLYGON);
-//	glColor3f(1, 1, 1);
-	glTexCoord2f(0, (float)logoHeight);
+	glTexCoord2f(0, mirroredScreenFrame.size.height);
 	glVertex2f(-1.0, -1.0);
-//	glColor3f(0, 1, 0);
-	glTexCoord2f((float)logoWidth, (float)logoHeight);
+	glTexCoord2f(mirroredScreenFrame.size.width, mirroredScreenFrame.size.height);
 	glVertex2f(1.0, -1.0);
-//	glColor3f(0, 0, 1);
-	glTexCoord2f((float)logoWidth, 0);
+	glTexCoord2f(mirroredScreenFrame.size.width, 0);
 	glVertex2f(1.0, 1.0);
-//	glColor3f(1, 1, 0);
 	glTexCoord2f(0, 0);
 	glVertex2f(-1.0, 1.0);
 	glEnd();
@@ -117,6 +112,13 @@
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, 0);
 	glDisable(GL_TEXTURE_RECTANGLE_ARB);
 	glShadeModel(GL_FLAT);
+	
+	self.hasDrawnLastSurface = YES;
+}
+
+- (BOOL)canDrawInCGLContext:(CGLContextObj)ctx pixelFormat:(CGLPixelFormatObj)pf forLayerTime:(CFTimeInterval)t displayTime:(const CVTimeStamp *)ts
+{
+	return !self.hasDrawnLastSurface;
 }
 
 - (BOOL)isAsynchronous

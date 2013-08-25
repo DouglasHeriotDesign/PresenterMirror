@@ -71,4 +71,13 @@
 	return YES;
 }
 
+/*
+- (void)flagsChanged:(NSEvent *)theEvent
+{
+	BOOL isHoldingCommand = theEvent.modifierFlags & NSCommandKeyMask;
+	self.alphaValue = isHoldingCommand ? 1.0 : 0.2;
+	self.ignoresMouseEvents = !isHoldingCommand;
+}
+*/
+
 @end

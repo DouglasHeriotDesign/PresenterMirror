@@ -10,6 +10,7 @@
 		A550639917C383F4005E337F /* DHPMMirrorLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A550639817C383F4005E337F /* DHPMMirrorLayer.m */; };
 		A550639B17C38594005E337F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550639A17C38594005E337F /* OpenGL.framework */; };
 		A550639D17C3910F005E337F /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550639C17C3910F005E337F /* IOSurface.framework */; };
+		A552725A17C4FA200079CEB9 /* DHPMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A552725917C4FA200079CEB9 /* DHPMApplication.m */; };
 		A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678AD15C6CD640026C03E /* NSScreen_Extension.m */; };
 		A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56678B015C6CDE80026C03E /* IOKit.framework */; };
 		A56678B415C6D47E0026C03E /* DHPMDisplayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */; };
@@ -49,6 +50,8 @@
 		A550639817C383F4005E337F /* DHPMMirrorLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMMirrorLayer.m; sourceTree = "<group>"; };
 		A550639A17C38594005E337F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		A550639C17C3910F005E337F /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		A552725817C4FA200079CEB9 /* DHPMApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPMApplication.h; sourceTree = "<group>"; };
+		A552725917C4FA200079CEB9 /* DHPMApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMApplication.m; sourceTree = "<group>"; };
 		A56678AC15C6CD640026C03E /* NSScreen_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScreen_Extension.h; sourceTree = "<group>"; };
 		A56678AD15C6CD640026C03E /* NSScreen_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScreen_Extension.m; sourceTree = "<group>"; };
 		A56678B015C6CDE80026C03E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -163,6 +166,8 @@
 				A550639717C383F4005E337F /* DHPMMirrorLayer.h */,
 				A550639817C383F4005E337F /* DHPMMirrorLayer.m */,
 				A592615315C6BE0D00A9D09F /* Supporting Files */,
+				A552725817C4FA200079CEB9 /* DHPMApplication.h */,
+				A552725917C4FA200079CEB9 /* DHPMApplication.m */,
 			);
 			path = PresenterMirror;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				A592615915C6BE0D00A9D09F /* main.m in Sources */,
 				A592616015C6BE0D00A9D09F /* DHPMAppDelegate.m in Sources */,
 				A550639917C383F4005E337F /* DHPMMirrorLayer.m in Sources */,
+				A552725A17C4FA200079CEB9 /* DHPMApplication.m in Sources */,
 				A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */,
 				A56678B415C6D47E0026C03E /* DHPMDisplayWindow.m in Sources */,
 			);

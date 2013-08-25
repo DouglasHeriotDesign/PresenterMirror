@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Quartz/Quartz.h>
 
+@class DHPMDisplayWindow;
+
 @interface DHPMAppDelegate : NSObject <NSApplicationDelegate, NSMenuDelegate /*, NSLayerDelegateContentsScaleUpdating*/>
 
 @property (readonly) CGDirectDisplayID selectedDisplayId;
@@ -19,5 +21,7 @@
 - (IBAction)selectScreen:(id)sender;
 - (IBAction)scale100:(id)sender;
 - (IBAction)selectKeepOnTop:(id)sender;
+
+@property (strong, readonly) DHPMDisplayWindow *window;
 
 @end

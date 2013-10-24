@@ -212,6 +212,14 @@
 									<reference key="NSOnImage" ref="35465992"/>
 									<reference key="NSMixedImage" ref="502551668"/>
 								</object>
+								<object class="NSMenuItem" id="474805296">
+									<reference key="NSMenu" ref="1040668291"/>
+									<string key="NSTitle">Disable Mouse Interaction</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="35465992"/>
+									<reference key="NSMixedImage" ref="502551668"/>
+								</object>
 							</array>
 						</object>
 					</object>
@@ -414,6 +422,22 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
+						<string key="label">selectDisableMouseInteraction</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="474805296"/>
+					</object>
+					<int key="connectionID">719</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">selectDisableMouseInteraction:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="474805296"/>
+					</object>
+					<int key="connectionID">720</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="91334386"/>
 						<reference key="destination" ref="976324537"/>
@@ -435,6 +459,22 @@
 						</object>
 					</object>
 					<int key="connectionID">716</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: values.ignoresMouseEvents</string>
+						<reference key="source" ref="474805296"/>
+						<reference key="destination" ref="567565163"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="474805296"/>
+							<reference key="NSDestination" ref="567565163"/>
+							<string key="NSLabel">value: values.ignoresMouseEvents</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">values.ignoresMouseEvents</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">723</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -657,6 +697,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="385786675"/>
 							<reference ref="836769994"/>
+							<reference ref="474805296"/>
 						</array>
 						<reference key="parent" ref="901749400"/>
 					</object>
@@ -679,6 +720,11 @@
 						<int key="objectID">714</int>
 						<reference key="object" ref="567565163"/>
 						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">718</int>
+						<reference key="object" ref="474805296"/>
+						<reference key="parent" ref="1040668291"/>
 					</object>
 				</array>
 			</object>
@@ -718,13 +764,14 @@
 				<string key="712.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="713.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="714.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="718.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="92.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">717</int>
+			<int key="maxID">723</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

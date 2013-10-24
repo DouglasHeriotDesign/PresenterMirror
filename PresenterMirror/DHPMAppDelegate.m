@@ -131,4 +131,16 @@
 		self.window.level = NSNormalWindowLevel;
 }
 
+- (IBAction)selectDisableMouseInteraction:(id)sender
+{
+	BOOL on = [[NSUserDefaults standardUserDefaults] boolForKey:@"ignoresMouseEvents"];
+	
+	// If we pressed the menu button, the keepOnTop value won't have changed yet, so flip it in here now
+	if([sender isKindOfClass:[NSMenuItem class]])
+		on = !on;
+	
+	self.window.ignoresMouseEvents = on;
+	self.window.alphaValue = on ? 0.7 : 1.0;
+}
+
 @end

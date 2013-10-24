@@ -21,6 +21,8 @@
 - (IBAction)selectScreen:(id)sender;
 - (IBAction)scale100:(id)sender;
 - (IBAction)selectKeepOnTop:(id)sender;
+- (IBAction)selectDisableMouseInteraction:(id)sender;
+
 
 @property (strong, readonly) DHPMDisplayWindow *window;
 

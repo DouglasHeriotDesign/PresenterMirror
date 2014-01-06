@@ -11,6 +11,9 @@
 		A550639B17C38594005E337F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550639A17C38594005E337F /* OpenGL.framework */; };
 		A550639D17C3910F005E337F /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A550639C17C3910F005E337F /* IOSurface.framework */; };
 		A552725A17C4FA200079CEB9 /* DHPMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A552725917C4FA200079CEB9 /* DHPMApplication.m */; };
+		A55C7182187AC0A000E1A207 /* DeckLinkAPIDispatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5EBD27D187AC02C0046B06E /* DeckLinkAPIDispatch.cpp */; };
+		A55C7185187AC0ED00E1A207 /* DeckLinkController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A55C7184187AC0ED00E1A207 /* DeckLinkController.mm */; };
+		A55C7188187AC0FD00E1A207 /* CapturePreview.mm in Sources */ = {isa = PBXBuildFile; fileRef = A55C7187187AC0FD00E1A207 /* CapturePreview.mm */; };
 		A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678AD15C6CD640026C03E /* NSScreen_Extension.m */; };
 		A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56678B015C6CDE80026C03E /* IOKit.framework */; };
 		A56678B415C6D47E0026C03E /* DHPMDisplayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */; };
@@ -52,6 +55,10 @@
 		A550639C17C3910F005E337F /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		A552725817C4FA200079CEB9 /* DHPMApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPMApplication.h; sourceTree = "<group>"; };
 		A552725917C4FA200079CEB9 /* DHPMApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMApplication.m; sourceTree = "<group>"; };
+		A55C7183187AC0ED00E1A207 /* DeckLinkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkController.h; sourceTree = "<group>"; };
+		A55C7184187AC0ED00E1A207 /* DeckLinkController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DeckLinkController.mm; sourceTree = "<group>"; };
+		A55C7186187AC0FD00E1A207 /* CapturePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CapturePreview.h; sourceTree = "<group>"; };
+		A55C7187187AC0FD00E1A207 /* CapturePreview.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CapturePreview.mm; sourceTree = "<group>"; };
 		A56678AC15C6CD640026C03E /* NSScreen_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSScreen_Extension.h; sourceTree = "<group>"; };
 		A56678AD15C6CD640026C03E /* NSScreen_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSScreen_Extension.m; sourceTree = "<group>"; };
 		A56678B015C6CDE80026C03E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -80,6 +87,15 @@
 		A592618215C6BE9900A9D09F /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		A592618715C6C08300A9D09F /* Mirror.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = Mirror.qtz; sourceTree = "<group>"; };
 		A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "v002 Media Tools.xcodeproj"; path = "v002-Media-Tools/v002 Media Tools.xcodeproj"; sourceTree = "<group>"; };
+		A5EBD272187AC02C0046B06E /* DeckLinkAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPI.h; sourceTree = "<group>"; };
+		A5EBD27A187AC02C0046B06E /* DeckLinkAPIConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPIConfiguration.h; sourceTree = "<group>"; };
+		A5EBD27B187AC02C0046B06E /* DeckLinkAPIDeckControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPIDeckControl.h; sourceTree = "<group>"; };
+		A5EBD27C187AC02C0046B06E /* DeckLinkAPIDiscovery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPIDiscovery.h; sourceTree = "<group>"; };
+		A5EBD27D187AC02C0046B06E /* DeckLinkAPIDispatch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeckLinkAPIDispatch.cpp; sourceTree = "<group>"; };
+		A5EBD280187AC02C0046B06E /* DeckLinkAPIModes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPIModes.h; sourceTree = "<group>"; };
+		A5EBD281187AC02C0046B06E /* DeckLinkAPIStreaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPIStreaming.h; sourceTree = "<group>"; };
+		A5EBD282187AC02C0046B06E /* DeckLinkAPITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPITypes.h; sourceTree = "<group>"; };
+		A5EBD283187AC02C0046B06E /* DeckLinkAPIVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeckLinkAPIVersion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +129,7 @@
 			children = (
 				A592615215C6BE0D00A9D09F /* PresenterMirror */,
 				A592616F15C6BE0E00A9D09F /* PresenterMirrorTests */,
+				A5EBD271187AC02C0046B06E /* DeckLink */,
 				A592614B15C6BE0D00A9D09F /* Frameworks */,
 				A592614915C6BE0D00A9D09F /* Products */,
 				A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */,
@@ -156,6 +173,8 @@
 		A592615215C6BE0D00A9D09F /* PresenterMirror */ = {
 			isa = PBXGroup;
 			children = (
+				A55C7186187AC0FD00E1A207 /* CapturePreview.h */,
+				A55C7187187AC0FD00E1A207 /* CapturePreview.mm */,
 				A592615E15C6BE0D00A9D09F /* DHPMAppDelegate.h */,
 				A592615F15C6BE0D00A9D09F /* DHPMAppDelegate.m */,
 				A592616115C6BE0D00A9D09F /* MainMenu.xib */,
@@ -165,6 +184,8 @@
 				A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */,
 				A550639717C383F4005E337F /* DHPMMirrorLayer.h */,
 				A550639817C383F4005E337F /* DHPMMirrorLayer.m */,
+				A55C7183187AC0ED00E1A207 /* DeckLinkController.h */,
+				A55C7184187AC0ED00E1A207 /* DeckLinkController.mm */,
 				A592615315C6BE0D00A9D09F /* Supporting Files */,
 				A552725817C4FA200079CEB9 /* DHPMApplication.h */,
 				A552725917C4FA200079CEB9 /* DHPMApplication.m */,
@@ -210,6 +231,22 @@
 				A5CBBFC515D1407600DC01D7 /* v002 Media Tools.plugin */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A5EBD271187AC02C0046B06E /* DeckLink */ = {
+			isa = PBXGroup;
+			children = (
+				A5EBD272187AC02C0046B06E /* DeckLinkAPI.h */,
+				A5EBD27A187AC02C0046B06E /* DeckLinkAPIConfiguration.h */,
+				A5EBD27B187AC02C0046B06E /* DeckLinkAPIDeckControl.h */,
+				A5EBD27C187AC02C0046B06E /* DeckLinkAPIDiscovery.h */,
+				A5EBD27D187AC02C0046B06E /* DeckLinkAPIDispatch.cpp */,
+				A5EBD280187AC02C0046B06E /* DeckLinkAPIModes.h */,
+				A5EBD281187AC02C0046B06E /* DeckLinkAPIStreaming.h */,
+				A5EBD282187AC02C0046B06E /* DeckLinkAPITypes.h */,
+				A5EBD283187AC02C0046B06E /* DeckLinkAPIVersion.h */,
+			);
+			path = DeckLink;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,11 +379,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55C7182187AC0A000E1A207 /* DeckLinkAPIDispatch.cpp in Sources */,
 				A592615915C6BE0D00A9D09F /* main.m in Sources */,
 				A592616015C6BE0D00A9D09F /* DHPMAppDelegate.m in Sources */,
 				A550639917C383F4005E337F /* DHPMMirrorLayer.m in Sources */,
+				A55C7188187AC0FD00E1A207 /* CapturePreview.mm in Sources */,
 				A552725A17C4FA200079CEB9 /* DHPMApplication.m in Sources */,
 				A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */,
+				A55C7185187AC0ED00E1A207 /* DeckLinkController.mm in Sources */,
 				A56678B415C6D47E0026C03E /* DHPMDisplayWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

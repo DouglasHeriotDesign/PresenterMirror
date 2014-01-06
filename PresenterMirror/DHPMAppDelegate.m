@@ -12,6 +12,7 @@
 
 @interface DHPMAppDelegate()
 @property (strong) DHPMDisplayWindow *window;
+@property (strong) DHPMDisplayWindow *windowBM;
 @property (strong) NSArray *screens;
 @property (weak) QCCompositionLayer *layer;
 @end
@@ -27,6 +28,8 @@
 	
 	self.window = [DHPMDisplayWindow new];
 	self.window.frameAutosaveName = @"PresenterMirror";
+	
+	self.window = [DHPMDisplayWindow new];
 	
 	[self selectKeepOnTop:self];
 		

@@ -29,9 +29,8 @@
 	self.window.frameAutosaveName = @"PresenterMirror";
 	
 	[self selectKeepOnTop:self];
-		
-	
 	[self setScreenIndex:[[NSUserDefaults standardUserDefaults] integerForKey:@"displayIndex"]];
+	[self selectDisableMouseInteraction:self];
 	
 	[self.window makeKeyAndOrderFront:self];
 }

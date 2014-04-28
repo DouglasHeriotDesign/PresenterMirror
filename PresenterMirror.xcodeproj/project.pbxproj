@@ -71,7 +71,6 @@
 		A592617615C6BE0E00A9D09F /* PresenterMirrorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresenterMirrorTests.m; sourceTree = "<group>"; };
 		A592618015C6BE8F00A9D09F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A592618215C6BE9900A9D09F /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		A592618715C6C08300A9D09F /* Mirror.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = Mirror.qtz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +165,6 @@
 		A592615315C6BE0D00A9D09F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A592618715C6C08300A9D09F /* Mirror.qtz */,
 				A592615415C6BE0D00A9D09F /* PresenterMirror-Info.plist */,
 				A592615515C6BE0D00A9D09F /* InfoPlist.strings */,
 				A592615815C6BE0D00A9D09F /* main.m */,

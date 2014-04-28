@@ -36,13 +36,6 @@
 			remoteGlobalIDString = A592614715C6BE0D00A9D09F;
 			remoteInfo = PresenterMirror;
 		};
-		A5CBBFC415D1407600DC01D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1B3410AA15B38BB10035CA52;
-			remoteInfo = "v002 Media Tools";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +72,6 @@
 		A592618015C6BE8F00A9D09F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A592618215C6BE9900A9D09F /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		A592618715C6C08300A9D09F /* Mirror.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = Mirror.qtz; sourceTree = "<group>"; };
-		A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "v002 Media Tools.xcodeproj"; path = "v002-Media-Tools/v002 Media Tools.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +107,6 @@
 				A592616F15C6BE0E00A9D09F /* PresenterMirrorTests */,
 				A592614B15C6BE0D00A9D09F /* Frameworks */,
 				A592614915C6BE0D00A9D09F /* Products */,
-				A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,14 +195,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A5CBBFBB15D0CDB700DC01D7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A5CBBFC515D1407600DC01D7 /* v002 Media Tools.plugin */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,7 +241,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DHPM;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Douglas Heriot";
 				TargetAttributes = {
 					A592614715C6BE0D00A9D09F = {
@@ -276,12 +259,6 @@
 			mainGroup = A592613D15C6BE0D00A9D09F;
 			productRefGroup = A592614915C6BE0D00A9D09F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A5CBBFBB15D0CDB700DC01D7 /* Products */;
-					ProjectRef = A5CBBFBA15D0CDB700DC01D7 /* v002 Media Tools.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A592614715C6BE0D00A9D09F /* PresenterMirror */,
@@ -289,16 +266,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A5CBBFC515D1407600DC01D7 /* v002 Media Tools.plugin */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "v002 Media Tools.plugin";
-			remoteRef = A5CBBFC415D1407600DC01D7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A592614615C6BE0D00A9D09F /* Resources */ = {
@@ -409,7 +376,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -439,7 +405,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -467,6 +432,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PresenterMirror/PresenterMirror-Prefix.pch";
 				INFOPLIST_FILE = "PresenterMirror/PresenterMirror-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -482,6 +448,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PresenterMirror/PresenterMirror-Prefix.pch";
 				INFOPLIST_FILE = "PresenterMirror/PresenterMirror-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

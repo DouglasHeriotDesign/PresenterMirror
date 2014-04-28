@@ -14,6 +14,7 @@
 		A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678AD15C6CD640026C03E /* NSScreen_Extension.m */; };
 		A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56678B015C6CDE80026C03E /* IOKit.framework */; };
 		A56678B415C6D47E0026C03E /* DHPMDisplayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */; };
+		A58861DA190E679D00D3C682 /* Syphon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A58861D9190E679D00D3C682 /* Syphon.framework */; };
 		A592614D15C6BE0D00A9D09F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592614C15C6BE0D00A9D09F /* Cocoa.framework */; };
 		A592615715C6BE0D00A9D09F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A592615515C6BE0D00A9D09F /* InfoPlist.strings */; };
 		A592615915C6BE0D00A9D09F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A592615815C6BE0D00A9D09F /* main.m */; };
@@ -50,6 +51,7 @@
 		A56678B015C6CDE80026C03E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		A56678B215C6D47E0026C03E /* DHPMDisplayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPMDisplayWindow.h; sourceTree = "<group>"; };
 		A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMDisplayWindow.m; sourceTree = "<group>"; };
+		A58861D9190E679D00D3C682 /* Syphon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Syphon.framework; sourceTree = "<group>"; };
 		A592614815C6BE0D00A9D09F /* PresenterMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresenterMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A592614C15C6BE0D00A9D09F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A592614F15C6BE0D00A9D09F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A58861DA190E679D00D3C682 /* Syphon.framework in Frameworks */,
 				A550639D17C3910F005E337F /* IOSurface.framework in Frameworks */,
 				A550639B17C38594005E337F /* OpenGL.framework in Frameworks */,
 				A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */,
@@ -121,6 +124,7 @@
 		A592614B15C6BE0D00A9D09F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A58861D9190E679D00D3C682 /* Syphon.framework */,
 				A550639C17C3910F005E337F /* IOSurface.framework */,
 				A550639A17C38594005E337F /* OpenGL.framework */,
 				A56678B015C6CDE80026C03E /* IOKit.framework */,
@@ -427,6 +431,10 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PresenterMirror/PresenterMirror-Prefix.pch";
 				INFOPLIST_FILE = "PresenterMirror/PresenterMirror-Info.plist";
@@ -443,6 +451,10 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PresenterMirror/PresenterMirror-Prefix.pch";
 				INFOPLIST_FILE = "PresenterMirror/PresenterMirror-Info.plist";

@@ -142,4 +142,9 @@
 	self.window.alphaValue = on ? 0.7 : 1.0;
 }
 
+- (IBAction)help:(id)sender
+{
+	[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"http://douglasheriot.com/mirror/"]];
+}
+
 @end

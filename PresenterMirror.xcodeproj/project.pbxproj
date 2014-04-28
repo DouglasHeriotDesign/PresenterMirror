@@ -199,9 +199,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A592614715C6BE0D00A9D09F /* PresenterMirror */ = {
+		A592614715C6BE0D00A9D09F /* Presenter Mirror */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A592617A15C6BE0E00A9D09F /* Build configuration list for PBXNativeTarget "PresenterMirror" */;
+			buildConfigurationList = A592617A15C6BE0E00A9D09F /* Build configuration list for PBXNativeTarget "Presenter Mirror" */;
 			buildPhases = (
 				A592614415C6BE0D00A9D09F /* Sources */,
 				A592614515C6BE0D00A9D09F /* Frameworks */,
@@ -211,7 +211,7 @@
 			);
 			dependencies = (
 			);
-			name = PresenterMirror;
+			name = "Presenter Mirror";
 			productName = PresenterMirror;
 			productReference = A592614815C6BE0D00A9D09F /* PresenterMirror.app */;
 			productType = "com.apple.product-type.application";
@@ -262,7 +262,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A592614715C6BE0D00A9D09F /* PresenterMirror */,
+				A592614715C6BE0D00A9D09F /* Presenter Mirror */,
 				A592616815C6BE0E00A9D09F /* PresenterMirrorTests */,
 			);
 		};
@@ -333,7 +333,7 @@
 /* Begin PBXTargetDependency section */
 		A592616E15C6BE0E00A9D09F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A592614715C6BE0D00A9D09F /* PresenterMirror */;
+			target = A592614715C6BE0D00A9D09F /* Presenter Mirror */;
 			targetProxy = A592616D15C6BE0E00A9D09F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -501,7 +501,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A592617A15C6BE0E00A9D09F /* Build configuration list for PBXNativeTarget "PresenterMirror" */ = {
+		A592617A15C6BE0E00A9D09F /* Build configuration list for PBXNativeTarget "Presenter Mirror" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A592617B15C6BE0E00A9D09F /* Debug */,

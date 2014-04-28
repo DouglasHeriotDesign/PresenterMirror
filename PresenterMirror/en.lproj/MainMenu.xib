@@ -15,10 +15,10 @@
         <customObject id="-3" userLabel="Application"/>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
-                <menuItem title="PresenterMirror" id="56">
-                    <menu key="submenu" title="PresenterMirror" systemMenu="apple" id="57">
+                <menuItem title="Presenter Mirror" id="56">
+                    <menu key="submenu" title="Presenter Mirror" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About PresenterMirror" id="58">
+                            <menuItem title="About Presenter Mirror" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
@@ -37,7 +37,7 @@
                             <menuItem isSeparatorItem="YES" id="144">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Hide PresenterMirror" keyEquivalent="h" id="134">
+                            <menuItem title="Hide Presenter Mirror" keyEquivalent="h" id="134">
                                 <connections>
                                     <action selector="hide:" target="-1" id="367"/>
                                 </connections>
@@ -56,7 +56,7 @@
                             <menuItem isSeparatorItem="YES" id="149">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Quit PresenterMirror" keyEquivalent="q" id="136">
+                            <menuItem title="Quit Presenter Mirror" keyEquivalent="q" id="136">
                                 <connections>
                                     <action selector="terminate:" target="-3" id="449"/>
                                 </connections>
@@ -126,9 +126,10 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="491">
                         <items>
-                            <menuItem title="PresenterMirror Help" keyEquivalent="?" id="492">
+                            <menuItem title="Presenter Mirror Help" id="492">
+                                <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="493"/>
+                                    <action selector="help:" target="494" id="rOM-YC-sWW"/>
                                 </connections>
                             </menuItem>
                         </items>

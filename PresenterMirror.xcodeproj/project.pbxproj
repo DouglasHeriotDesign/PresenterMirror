@@ -53,7 +53,7 @@
 		A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMDisplayWindow.m; sourceTree = "<group>"; };
 		A58861DE190E85AA00D3C682 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A58861E6190E8CCB00D3C682 /* Presenter Mirror.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Presenter Mirror.entitlements"; path = "../Presenter Mirror.entitlements"; sourceTree = "<group>"; };
-		A592614815C6BE0D00A9D09F /* PresenterMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresenterMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A592614815C6BE0D00A9D09F /* Presenter Mirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Presenter Mirror.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A592614C15C6BE0D00A9D09F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A592614F15C6BE0D00A9D09F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		A592615015C6BE0D00A9D09F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -115,7 +115,7 @@
 		A592614915C6BE0D00A9D09F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A592614815C6BE0D00A9D09F /* PresenterMirror.app */,
+				A592614815C6BE0D00A9D09F /* Presenter Mirror.app */,
 				A592616915C6BE0E00A9D09F /* PresenterMirrorTests.octest */,
 			);
 			name = Products;
@@ -215,7 +215,7 @@
 			);
 			name = "Presenter Mirror";
 			productName = PresenterMirror;
-			productReference = A592614815C6BE0D00A9D09F /* PresenterMirror.app */;
+			productReference = A592614815C6BE0D00A9D09F /* Presenter Mirror.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A592616815C6BE0E00A9D09F /* PresenterMirrorTests */ = {

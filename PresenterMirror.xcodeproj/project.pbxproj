@@ -52,6 +52,7 @@
 		A56678B215C6D47E0026C03E /* DHPMDisplayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPMDisplayWindow.h; sourceTree = "<group>"; };
 		A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMDisplayWindow.m; sourceTree = "<group>"; };
 		A58861DE190E85AA00D3C682 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A58861E6190E8CCB00D3C682 /* Presenter Mirror.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = "Presenter Mirror.entitlements"; path = "../Presenter Mirror.entitlements"; sourceTree = "<group>"; };
 		A592614815C6BE0D00A9D09F /* PresenterMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresenterMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A592614C15C6BE0D00A9D09F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A592614F15C6BE0D00A9D09F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -168,6 +169,7 @@
 		A592615315C6BE0D00A9D09F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A58861E6190E8CCB00D3C682 /* Presenter Mirror.entitlements */,
 				A592615415C6BE0D00A9D09F /* PresenterMirror-Info.plist */,
 				A592615515C6BE0D00A9D09F /* InfoPlist.strings */,
 				A592615815C6BE0D00A9D09F /* main.m */,
@@ -247,6 +249,11 @@
 				TargetAttributes = {
 					A592614715C6BE0D00A9D09F = {
 						DevelopmentTeam = HUE4TRNJYS;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -429,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Presenter Mirror.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -446,6 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Presenter Mirror.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;

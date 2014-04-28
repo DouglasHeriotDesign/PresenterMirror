@@ -30,6 +30,15 @@
 #include "CapturePreview.h"
 
 
+extern IDeckLinkGLScreenPreviewHelper** globalScreenPreviewHelper;
+
+class DeckLinkScreenPreviewCallback : public IDeckLinkScreenPreviewCallback
+{
+public:
+    virtual HRESULT DrawFrame (/* in */ IDeckLinkVideoFrame *theFrame);
+};
+
+
 class DeckLinkController : public IDeckLinkInputCallback
 {
 private:
@@ -39,7 +48,8 @@ private:
 	std::vector<IDeckLink*>			deviceList;
 	IDeckLink*						selectedDevice;
 	IDeckLinkInput*					deckLinkInput;
-	IDeckLinkScreenPreviewCallback*	screenPreviewCallback;
+	IDeckLinkGLScreenPreviewHelper*	screenPreviewHelper;
+	DeckLinkScreenPreviewCallback*  screenPreviewCallback;
 	std::vector<IDeckLinkDisplayMode*>	modeList;
 	
 	bool							supportFormatDetection;

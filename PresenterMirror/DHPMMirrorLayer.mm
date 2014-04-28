@@ -14,6 +14,8 @@
 #import <IOSurface/IOSurface.h>
 #import <OpenGL/CGLIOSurface.h>
 
+#import "DeckLinkController.h"
+
 @interface DHPMMirrorLayer()
 {
 	CGDisplayStreamRef displayStream;
@@ -88,6 +90,13 @@
 		hasCreatedTexture = YES;
 	}
 	
+	
+	static BOOL hasInitGL;
+	if(!hasInitGL && *globalScreenPreviewHelper)
+	{
+		(*globalScreenPreviewHelper)->InitializeGL();
+	}
+	
 	glEnable(GL_TEXTURE_RECTANGLE_ARB);
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, surfaceTexture);
 	CGLError err = CGLTexImageIOSurface2D(ctx, GL_TEXTURE_RECTANGLE_ARB, GL_RGBA, mirroredScreenSize.width, mirroredScreenSize.height, GL_BGRA, GL_UNSIGNED_INT_8_8_8_8_REV, iosurface, 0);
@@ -108,9 +117,9 @@
 	glColor4f(1.0, 1.0, 1.0, 1.0);
 	
 	GLfloat textureCoords[] = {
-		0, mirroredScreenSize.height,
-		mirroredScreenSize.width, mirroredScreenSize.height,
-		mirroredScreenSize.width, 0,
+		0, (GLfloat)mirroredScreenSize.height,
+		(GLfloat)mirroredScreenSize.width, (GLfloat)mirroredScreenSize.height,
+		(GLfloat)mirroredScreenSize.width, 0,
 		0, 0};
 	
 	GLfloat vertices[] = {
@@ -132,10 +141,17 @@
 	glDisable(GL_TEXTURE_COORD_ARRAY);
 	glDisable(GL_VERTEX_ARRAY);
 	
-	
 	glBindTexture(GL_TEXTURE_RECTANGLE_ARB, 0);
 	glDisable(GL_TEXTURE_RECTANGLE_ARB);
 	glShadeModel(GL_FLAT);
+	
+	
+	
+	if(*globalScreenPreviewHelper)
+	{
+		(*globalScreenPreviewHelper)->PaintGL();
+	}
+	
 	
 	self.hasDrawnLastSurface = YES;
 }

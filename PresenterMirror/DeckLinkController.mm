@@ -29,10 +29,26 @@
 
 using namespace std;
 
+IDeckLinkGLScreenPreviewHelper** globalScreenPreviewHelper;
+
+HRESULT DeckLinkScreenPreviewCallback::DrawFrame(/* in */ IDeckLinkVideoFrame *theFrame)
+{
+	if(globalScreenPreviewHelper && *globalScreenPreviewHelper)
+		return (*globalScreenPreviewHelper)->SetFrame(theFrame);
+	else
+		return E_FAIL; // picked something
+}
+
+
+
+
+
 DeckLinkController::DeckLinkController(CapturePreviewAppDelegate* delegate)
 	: uiDelegate(delegate), selectedDevice(NULL), deckLinkInput(NULL), 
-	screenPreviewCallback(NULL), supportFormatDetection(false), currentlyCapturing(false)
-{}
+	screenPreviewHelper(NULL), supportFormatDetection(false), currentlyCapturing(false)
+{
+	globalScreenPreviewHelper = &screenPreviewHelper;
+}
 
 
 DeckLinkController::~DeckLinkController()
@@ -40,10 +56,10 @@ DeckLinkController::~DeckLinkController()
 	vector<IDeckLink*>::iterator it;
 	
 	// Release screen preview
-	if (screenPreviewCallback != NULL)
+	if (screenPreviewHelper != NULL)
 	{
-		screenPreviewCallback->Release();
-		screenPreviewCallback = NULL;
+		screenPreviewHelper->Release();
+		screenPreviewHelper = NULL;
 	}
 		
 	// Release the IDeckLink list
@@ -81,7 +97,7 @@ bool		DeckLinkController::init(NSView *previewView)
 		goto bail;
 	}
 	
-	screenPreviewCallback = CreateCocoaScreenPreview((__bridge void*)previewView);
+	screenPreviewHelper = CreateOpenGLScreenPreviewHelper();
 
 	result = true;
 	

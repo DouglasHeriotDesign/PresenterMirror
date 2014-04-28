@@ -37,9 +37,5 @@ You can also [download compiled `.app` (v0.35)](https://github.com/downloads/Dou
 Licenced under Creative Commons, Attribution – Non Commercial – Share Alike 3.0
 See [LICENCE.md](https://github.com/DouglasHeriot/PresenterMirror/blob/master/LICENCE.md)
 
-Includes modified [v002 Media Tools](https://github.com/DouglasHeriot/v002-Media-Tools)
-
-
-
 
 

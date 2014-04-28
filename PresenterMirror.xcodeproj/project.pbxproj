@@ -14,6 +14,7 @@
 		A56678AE15C6CD640026C03E /* NSScreen_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678AD15C6CD640026C03E /* NSScreen_Extension.m */; };
 		A56678B115C6CDE80026C03E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56678B015C6CDE80026C03E /* IOKit.framework */; };
 		A56678B415C6D47E0026C03E /* DHPMDisplayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */; };
+		A58861DF190E85AA00D3C682 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58861DE190E85AA00D3C682 /* Images.xcassets */; };
 		A592614D15C6BE0D00A9D09F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A592614C15C6BE0D00A9D09F /* Cocoa.framework */; };
 		A592615715C6BE0D00A9D09F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A592615515C6BE0D00A9D09F /* InfoPlist.strings */; };
 		A592615915C6BE0D00A9D09F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A592615815C6BE0D00A9D09F /* main.m */; };
@@ -50,6 +51,7 @@
 		A56678B015C6CDE80026C03E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		A56678B215C6D47E0026C03E /* DHPMDisplayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHPMDisplayWindow.h; sourceTree = "<group>"; };
 		A56678B315C6D47E0026C03E /* DHPMDisplayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHPMDisplayWindow.m; sourceTree = "<group>"; };
+		A58861DE190E85AA00D3C682 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A592614815C6BE0D00A9D09F /* PresenterMirror.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresenterMirror.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A592614C15C6BE0D00A9D09F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A592614F15C6BE0D00A9D09F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -158,6 +160,7 @@
 				A592615315C6BE0D00A9D09F /* Supporting Files */,
 				A552725817C4FA200079CEB9 /* DHPMApplication.h */,
 				A552725917C4FA200079CEB9 /* DHPMApplication.m */,
+				A58861DE190E85AA00D3C682 /* Images.xcassets */,
 			);
 			path = PresenterMirror;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A592615715C6BE0D00A9D09F /* InfoPlist.strings in Resources */,
+				A58861DF190E85AA00D3C682 /* Images.xcassets in Resources */,
 				A592615D15C6BE0D00A9D09F /* Credits.rtf in Resources */,
 				A592616315C6BE0D00A9D09F /* MainMenu.xib in Resources */,
 			);
@@ -424,6 +428,7 @@
 		A592617B15C6BE0E00A9D09F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -440,6 +445,7 @@
 		A592617C15C6BE0E00A9D09F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;

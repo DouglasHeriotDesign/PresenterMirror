@@ -22,9 +22,6 @@
 {
 	self.screens = [NSScreen screens];
 	
-	// Load the custom screen capture plugin
-	[QCPlugIn loadPlugInAtPath:[[NSBundle mainBundle] pathForResource:@"v002 Media Tools" ofType:@"plugin"]];
-	
 	self.window = [DHPMDisplayWindow new];
 	self.window.frameAutosaveName = @"PresenterMirror";
 	
@@ -113,7 +110,23 @@
 	
 	newFrame = [self.window constrainFrameRect:newFrame toScreen:self.window.screen];
 	
-	[self.window setFrame:newFrame display:YES animate:NO];
+	[self.window setFrame:newFrame display:YES animate:YES];
+}
+
+- (IBAction)scaleSmall:(id)sender
+{
+	NSScreen *mainScreen = [NSScreen screens][0];
+	
+	NSRect newFrame = self.window.frame; // contains current origin
+	newFrame.size.width = 300;
+	newFrame.size.height = 300 * self.selectedScreen.frame.size.height / self.selectedScreen.frame.size.width;
+	
+	newFrame.origin.x = mainScreen.frame.origin.x + 50;
+	newFrame.origin.y = mainScreen.frame.origin.y + 50;
+	
+	newFrame = [self.window constrainFrameRect:newFrame toScreen:mainScreen];
+	
+	[self.window setFrame:newFrame display:YES animate:YES];
 }
 
 - (IBAction)selectKeepOnTop:(id)sender

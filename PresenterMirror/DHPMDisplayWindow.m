@@ -36,6 +36,14 @@
 	return self;
 }
 
+- (void)setFrame:(NSRect)frameRect display:(BOOL)displayFlag animate:(BOOL)animateFlag
+{
+	[super setFrame:frameRect display:displayFlag animate:animateFlag];
+	
+	// Make sure the layer updates its size
+	[self.openGLLayer setNeedsDisplay];
+}
+
 - (void)setFrame:(NSRect)frameRect display:(BOOL)flag
 {
 	[super setFrame:frameRect display:flag];

@@ -81,6 +81,12 @@
                                     <action selector="scale100:" target="494" id="711"/>
                                 </connections>
                             </menuItem>
+                            <menuItem title="Shrink Window" keyEquivalent="0" id="CwG-PQ-eIx">
+                                <connections>
+                                    <action selector="scaleSmall:" target="494" id="dEz-75-xAW"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="tWw-yX-FFt"/>
                             <menuItem title="Keep on Top" keyEquivalent="k" id="713">
                                 <connections>
                                     <action selector="selectKeepOnTop:" target="494" id="717"/>

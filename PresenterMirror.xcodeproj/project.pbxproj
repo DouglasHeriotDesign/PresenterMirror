@@ -235,7 +235,7 @@
 			name = PresenterMirrorTests;
 			productName = PresenterMirrorTests;
 			productReference = A592616915C6BE0E00A9D09F /* PresenterMirrorTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -244,8 +244,9 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = DHPM;
+				LastTestingUpgradeCheck = 0710;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Douglas Heriot";
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					A592614715C6BE0D00A9D09F = {
 						DevelopmentTeam = HUE4TRNJYS;
@@ -437,8 +438,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Presenter Mirror.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PresenterMirror/PresenterMirror-Prefix.pch";
@@ -455,8 +456,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Presenter Mirror.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PresenterMirror/PresenterMirror-Prefix.pch";
